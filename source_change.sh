@@ -1,125 +1,77 @@
 
-	#!/bin/bash
+#!/bin/bash
 
 
-	
 
 
 
-	echo "****************************begin**************************************"
 
+echo "****************************begin**************************************"
 
-	echo "make a copy..."
 
+echo "make a copy..."
 
-	mv /etc/apt/sources.list /etc/apt/sources.list.bak
 
+mv /etc/apt/sources.list /etc/apt/sources.list.bak
 
-	
 
 
 
-	echo "remove old sources.list..."
 
 
-	rm /etc/apt/sources.list
+echo "remove old sources.list..."
 
 
-	
+rm /etc/apt/sources.list
 
 
 
-	echo "creating new sources.list..."
 
 
-	touch /etc/apt/sources.list
 
+echo "creating new sources.list..."
 
-	echo "deb 
 
+touch /etc/apt/sources.list
 
 
-	http://mirrors.aliyun.com/ubuntu/ trusty main restricted universe multiverse" >> /etc/apt/sources.list
+echo "deb http://mirrors.aliyun.com/ubuntu/ trusty main restricted universe multiverse" >> /etc/apt/sources.list
 
 
-	echo "deb 
+echo "deb http://mirrors.aliyun.com/ubuntu/ trusty-security main restricted universe multiverse" >> /etc/apt/sources.list
 
 
+echo "deb http://mirrors.aliyun.com/ubuntu/ trusty-updates main restricted universe multiverse" >> /etc/apt/sources.list
 
-	http://mirrors.aliyun.com/ubuntu/ trusty-security main restricted universe multiverse" >> /etc/apt/sources.list
 
+echo "deb http://mirrors.aliyun.com/ubuntu/ trusty-proposed main restricted universe multiverse" >> /etc/apt/sources.list
 
-	echo "deb 
 
+echo "deb http://mirrors.aliyun.com/ubuntu/ trusty-backports main restricted universe multiverse" >> /etc/apt/sources.list
 
 
-	http://mirrors.aliyun.com/ubuntu/ trusty-updates main restricted universe multiverse" >> /etc/apt/sources.list
+echo "deb-src http://mirrors.aliyun.com/ubuntu/ trusty main restricted universe multiverse" >> /etc/apt/sources.list
 
 
-	echo "deb 
+echo "deb-src http://mirrors.aliyun.com/ubuntu/ trusty-security main restricted universe multiverse" >> /etc/apt/sources.list
 
 
+echo "deb-src http://mirrors.aliyun.com/ubuntu/ trusty-updates main restricted universe multiverse" >> /etc/apt/sources.list
 
-	http://mirrors.aliyun.com/ubuntu/ trusty-proposed main restricted universe multiverse" >> /etc/apt/sources.list
 
+echo "deb-src http://mirrors.aliyun.com/ubuntu/ trusty-proposed main restricted universe multiverse" >> /etc/apt/sources.list
 
-	echo "deb 
 
+echo "deb-src http://mirrors.aliyun.com/ubuntu/ trusty-backports main restricted universe multiverse" >> /etc/apt/sources.list
 
+echo " create sources.list success"
 
-	http://mirrors.aliyun.com/ubuntu/ trusty-backports main restricted universe multiverse" >> /etc/apt/sources.list
+echo "update package..."
+apt-get update
 
 
-	echo "deb-src 
 
 
 
-	http://mirrors.aliyun.com/ubuntu/ trusty main restricted universe multiverse" >> /etc/apt/sources.list
 
-
-	echo "deb-src 
-
-
-
-	http://mirrors.aliyun.com/ubuntu/ trusty-security main restricted universe multiverse" >> /etc/apt/sources.list
-
-
-	echo "deb-src 
-
-
-
-	http://mirrors.aliyun.com/ubuntu/ trusty-updates main restricted universe multiverse" >> /etc/apt/sources.list
-
-
-	echo "deb-src 
-
-
-
-	http://mirrors.aliyun.com/ubuntu/ trusty-proposed main restricted universe multiverse" >> /etc/apt/sources.list
-
-
-	echo "deb-src 
-
-
-
-	http://mirrors.aliyun.com/ubuntu/ trusty-backports main restricted universe multiverse" >> /etc/apt/sources.list
-
-
-	echo " create sources.list success"
-
-
-	
-
-
-
-	echo "update package..."
-
-
-	apt-get update
-
-
-	
-
-
-
-	echo "*****************************done************************************"
+echo "*****************************done************************************"
